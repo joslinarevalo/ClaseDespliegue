@@ -1,14 +1,13 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-2:490176235768:task-definition/tareaDespliegue:1",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-2:490176235768:task-definition/Tdespliegue:1",
     "containerDefinitions": [
         {
-            "name": "tareaDespliegue",
+            "name": "Tdespliegue",
             "image": "490176235768.dkr.ecr.us-east-2.amazonaws.com/repos-php",
             "cpu": 0,
-            "memory": 1024,
             "portMappings": [
                 {
-                    "name": "tareadespliegue-80-tcp",
+                    "name": "tdespliegue-80-tcp",
                     "containerPort": 80,
                     "hostPort": 80,
                     "protocol": "tcp",
@@ -23,7 +22,8 @@
             "ulimits": []
         }
     ],
-    "family": "tareaDespliegue",
+    "family": "Tdespliegue",
+    "taskRoleArn": "arn:aws:iam::490176235768:role/ecsTaskExecutionRole",
     "executionRoleArn": "arn:aws:iam::490176235768:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
     "revision": 1,
@@ -32,6 +32,9 @@
     "requiresAttributes": [
         {
             "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.task-iam-role"
         },
         {
             "name": "ecs.capability.execution-role-ecr-pull"
@@ -57,7 +60,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2023-07-12T21:38:26.952Z",
+    "registeredAt": "2023-07-13T04:00:41.780Z",
     "registeredBy": "arn:aws:iam::490176235768:root",
     "tags": []
 }
