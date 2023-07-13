@@ -4,6 +4,6 @@
 </head>
 <body>
 <?php echo '<p>Hola Mundo</p>'; ?>
-<?php echo '<p>clase jueves  </p>'; ?>
+<?php echo '<p>Claudia Yoselin Rivas Arevalo</p>'; ?>
 </body>
 </html>
